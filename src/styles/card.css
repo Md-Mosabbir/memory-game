@@ -1,0 +1,31 @@
+.card {
+  background-color: aquamarine;
+  height: 450px;
+  margin: 10px;
+  aspect-ratio: 9/16;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.animal-image {
+  background-color: aqua;
+  width: 130px;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+}
+
+.name-animal {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info {
+  display: flex;
+  gap: 2rem;
+}

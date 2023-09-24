@@ -1,0 +1,15 @@
+.navigation-bar-container {
+  background-color: aqua;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 2rem;
+}
+
+.high-score-container,
+.current-score-container {
+  display: flex;
+  background-color: pink;
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+}
