@@ -1,6 +1,6 @@
 import '../styles/nav.css'
 
-export default function Navigation() {
+export default function Navigation({ highScore, currentScore }) {
   return (
     <>
       <nav className="navigation-bar-container">
@@ -13,7 +13,7 @@ export default function Navigation() {
             <p>High-score: </p>
           </div>
           <div className="score-board-high">
-            <p>23</p>
+            <p>{highScore}</p>
           </div>
         </div>
         <div className="current-score-container">
@@ -21,7 +21,7 @@ export default function Navigation() {
             <p>Current-score: </p>
           </div>
           <div className="score-board-current">
-            <p>23</p>
+            <p>{currentScore}</p>
           </div>
         </div>
       </nav>

@@ -6,6 +6,7 @@ body {
 }
 
 /* Style for the form container */
+.game-form-container,
 .game-form-container {
   display: flex;
   justify-content: center;
@@ -19,7 +20,8 @@ body {
 }
 
 /* Style for the form */
-.game-form {
+.game-form,
+.game-over-content {
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -61,7 +63,8 @@ input[type='text'] {
   margin-bottom: 20px;
 }
 
-.difficulty {
+.difficulty,
+.game-over-content button {
   padding: 10px 20px;
   background-color: #007bff;
   color: #fff;

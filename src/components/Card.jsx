@@ -1,8 +1,16 @@
 import '../styles/card.css'
 
-export default function Card({ url, title, copyright, media, serviceVersion }) {
+export default function Card({
+  id,
+  url,
+  title,
+  copyright,
+  media,
+  serviceVersion,
+  handleCard,
+}) {
   return (
-    <div className="card">
+    <div className="card" onClick={handleCard} id={id}>
       <div className="space-image">
         <img src={url} alt={url} />
 
