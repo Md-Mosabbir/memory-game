@@ -1,27 +1,21 @@
 import '../styles/card.css'
 
-export default function Card({
-  picture,
-  name,
-  sciName,
-  region,
-  nationalAnimal,
-}) {
+export default function Card({ url, title, copyright, media, serviceVersion }) {
   return (
     <div className="card">
-      <div className="animal-image">
-        <img src={picture} alt={picture} />
-      </div>
+      <div className="space-image">
+        <img src={url} alt={url} />
 
-      <div className="name-animal">
-        <h1 className="title-name"> {name} </h1>
+        <div className="title-copyright">
+          <h1 className="title"> {title} </h1>
 
-        <h2 className="scintific-name">{sciName}</h2>
+          <h2 className="copyright">{copyright}</h2>
+        </div>
       </div>
 
       <div className="info">
-        <p className="region"> {region} </p>
-        <p className="national">{nationalAnimal}</p>
+        <p className="media"> {media} </p>
+        <p className="serviceVersion">{serviceVersion}</p>
       </div>
     </div>
   )

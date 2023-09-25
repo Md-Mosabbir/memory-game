@@ -1,0 +1,85 @@
+/* form.css */
+
+/* Base styles for the entire page */
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Style for the form container */
+.game-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  position: absolute;
+  z-index: 10; /* Set a high z-index to make it appear in front */
+  top: 0;
+  background-color: #007bff13;
+}
+
+/* Style for the form */
+.game-form {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  text-align: center;
+}
+
+/* Style for the form title */
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Style for the input field and label */
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+input[type='text'] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+.input-name {
+  display: flex;
+  gap: 1rem;
+  align-items: baseline;
+}
+/* Style for the difficulty buttons */
+.difficulty-buttons {
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.difficulty {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Style for the Start button */
+#start {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#start:hover {
+  background-color: #218838;
+}

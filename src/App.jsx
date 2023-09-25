@@ -1,31 +1,19 @@
-import Card from './components/Card'
+import { useState } from 'react'
+
 import Form from './components/Form'
+
 import Navigation from './components/Navigation'
+import PlanetApi from './components/AnimalApi'
 
 function App() {
+  const [planetData, setPlanetData] = useState([])
+
   return (
     <>
       <Navigation />
-      <Card
-        picture={'./assets/IMG_20190807_202937.jpg'}
-        name="Shishkaton"
-        sciName="Shishkaton"
-        region="Shishkaton"
-        nationalAnimal="Shishkaton"
-      />
-      <Card
-        name="Shishkaton"
-        sciName="Shishkaton"
-        region="Shishkaton"
-        nationalAnimal="Shishkaton"
-      />
-      <Card
-        name="Shishkaton"
-        sciName="Shishkaton"
-        region="Shishkaton"
-        nationalAnimal="Shishkaton"
-      />
+
       <Form />
+      <PlanetApi planetData={planetData} setPlanetData={setPlanetData} />
     </>
   )
 }

@@ -1,31 +1,61 @@
 .card {
-  background-color: aquamarine;
-  height: 450px;
-  margin: 10px;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 1rem;
   aspect-ratio: 9/16;
-
+  max-height: 600px; /* 16:9 aspect ratio */
+  margin: 10px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.animal-image {
-  background-color: aqua;
-  width: 130px;
-  border-radius: 50%;
-  aspect-ratio: 1/1;
+  justify-content: space-between;
   overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.name-animal {
+.card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.space-image {
+  background-color: #ccc; /* Placeholder background color */
   display: flex;
-  gap: 0.5rem;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+.space-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.title-copyright {
+  padding: 10px;
+}
+
+.title {
+  font-size: 1.5rem;
+  margin: 0;
+  color: #333;
+}
+
+.copyright {
+  font-size: 1rem;
+  margin: 0;
 }
 
 .info {
+  padding: 10px;
   display: flex;
-  gap: 2rem;
+  justify-content: space-between;
+}
+
+.media,
+.serviceVersion {
+  font-size: 1rem;
+  margin: 0;
+  color: #777;
 }
