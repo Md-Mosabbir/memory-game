@@ -1,4 +1,4 @@
-import '../styles/form.css'
+import '../styles/gameover.css'
 
 export default function GameOver({
   handleRetry,

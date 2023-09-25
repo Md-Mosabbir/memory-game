@@ -8,12 +8,14 @@ import GameOver from './components/GameOver'
 
 function App() {
   const [planetData, setPlanetData] = useState([])
+  const [currentGame, setCurrentGame] = useState([])
   const [fetch, setFetch] = useState(false)
   const [startGame, setStartGame] = useState(true)
+
   const [count, setCount] = useState(0)
-  const [currentGame, setCurrentGame] = useState([])
   const [currentScore, setCurrentScore] = useState(0)
   const [highScore, setHighScore] = useState(0)
+
   const [gameOver, setGameOver] = useState(false)
   const [win, setWin] = useState(false)
 

@@ -4,7 +4,7 @@ export default function Form({ handleCount, handleStart }) {
   return (
     <div className="game-form-container">
       <div className="game-form">
-        <h1>I Do Remember</h1>
+        <h1>Galactic Recall</h1>
 
         <div className="difficulty-buttons">
           <button className="difficulty" onClick={handleCount} id="easy">

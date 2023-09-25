@@ -1,15 +1,67 @@
 .navigation-bar-container {
-  background-color: aqua;
+  background-color: var(--primary-colour);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 2rem;
   padding-block: 2rem;
+  padding-inline: 8rem;
+  flex-wrap: wrap;
 }
-
+.navigation-bar-container .logo h1 {
+  font-size: 2.5rem;
+  font-family: var(--title-font);
+  background: var(--title-colour);
+  background-size: 150%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+}
 .high-score-container,
 .current-score-container {
   display: flex;
-  background-color: pink;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  background-color: var(--brand-colour);
   padding: 1rem 1.5rem;
   border-radius: 1rem;
+  font-family: var(--font-nav-score);
+}
+.score-board-current,
+.score-board-high {
+  width: 40px;
+  padding: 10px;
+  background-color: #fff;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.scores-container {
+  display: flex;
+  gap: 1rem;
+}
+
+@media (max-width: 963px) {
+  .navigation-bar-container {
+    justify-content: center;
+    padding-block: 2rem;
+    padding-inline: 3rem;
+  }
+  .high-score-container,
+  .current-score-container {
+    padding: 0.5rem;
+  }
+}
+@media (max-width: 300px) {
+  .navigation-bar-container {
+    justify-content: center;
+    padding: 0.8rem;
+  }
+  .high-score-container,
+  .current-score-container {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
 }

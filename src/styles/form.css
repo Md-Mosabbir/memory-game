@@ -1,88 +1,105 @@
 /* form.css */
 
-/* Base styles for the entire page */
-body {
-  font-family: Arial, sans-serif;
-}
-
 /* Style for the form container */
-.game-form-container,
 .game-form-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  width: 100%;
-  position: absolute;
-  z-index: 10; /* Set a high z-index to make it appear in front */
+  position: fixed; /* Use fixed positioning to cover the entire viewport */
   top: 0;
-  background-color: #007bff13;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10; /* Set a high z-index to make it appear in front */
+
+  background-color: var(--primary-colour);
 }
 
 /* Style for the form */
-.game-form,
-.game-over-content {
-  background-color: #fff;
+.game-form {
+  background-color: var(--secondary-colour);
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  padding: 20px;
+  box-shadow: 0px 2px 14px rgba(0, 0, 0, 0.699);
+  padding: 2rem;
   text-align: center;
+  min-width: 450px;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* Style for the form title */
-h1 {
-  font-size: 24px;
+.game-form > h1 {
+  font-family: var(--title-font);
+  font-size: 3rem;
   margin-bottom: 20px;
+  background: linear-gradient(to right, #176b87, #64ccc5, #dafffb, #176b87);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+  animation: background-pan 10s linear infinite;
 }
 
-/* Style for the input field and label */
-label {
-  display: block;
-  margin-bottom: 10px;
-  font-weight: bold;
+@keyframes background-pan {
+  from {
+    background-position: 0% center;
+  }
+  to {
+    background-position: -200% center;
+  }
 }
 
-input[type='text'] {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  margin-bottom: 20px;
-}
-.input-name {
-  display: flex;
-  gap: 1rem;
-  align-items: baseline;
-}
 /* Style for the difficulty buttons */
 .difficulty-buttons {
   display: flex;
   flex-direction: column;
-
-  gap: 10px;
+  width: 100%;
+  gap: 3rem;
   margin-bottom: 20px;
 }
 
-.difficulty,
-.game-over-content button {
+.difficulty {
+  font-size: 1.8rem;
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: transparent;
+  border: 2px solid var(--brand-colour);
   color: #fff;
-  border: none;
-  border-radius: 4px;
+
+  border-radius: 10px;
   cursor: pointer;
+  width: 100%;
+  height: 80px;
 }
 
 /* Style for the Start button */
 #start {
+  font-size: 1.8rem;
   padding: 10px 20px;
-  background-color: #28a745;
+  background-color: var(--brand-colour);
   color: #fff;
   border: none;
-  border-radius: 4px;
+  border-radius: 10px;
   cursor: pointer;
+  width: 70%;
+  height: 60px;
 }
 
-#start:hover {
-  background-color: #218838;
+@media (max-width: 480px) {
+  .game-form {
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 300px) {
+  .game-form > h1 {
+    font-size: 2rem;
+  }
+  .difficulty {
+    font-size: 1.2rem;
+
+    height: 50px;
+  }
 }

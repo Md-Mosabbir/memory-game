@@ -1,5 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Rubik&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+:root {
+  --neutral-colour: #000;
+  --primary-colour: #001c30;
+  --secondary-colour: #05222c;
+  --brand-colour: #64ccc5;
+
+  --title-font: 'Lilita One', cursive;
+  --font-nav-score: 'Rubik', sans-serif;
+
+  --title-colour: linear-gradient(to right, #176b87, #64ccc5, #dafffb, #176b87);
 }
