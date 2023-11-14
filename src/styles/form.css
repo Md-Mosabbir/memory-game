@@ -17,9 +17,8 @@
 
 /* Style for the form */
 .game-form {
-  background-color: var(--secondary-colour);
   border-radius: 8px;
-  box-shadow: 0px 2px 14px rgba(0, 0, 0, 0.699);
+
   padding: 2rem;
   text-align: center;
   min-width: 450px;
@@ -102,4 +101,9 @@
 
     height: 50px;
   }
+}
+
+.active {
+  background-color: #fff;
+  color: #000;
 }
