@@ -10,7 +10,7 @@ export default function PlanetApi({
   startFetching,
   handleCard,
 }) {
-  const API_KEY = 'Wlo2nXYr4KaNUFIhaQbhtxZLxRRF1LTPDMgIRp9H'
+  const API_KEY = 'NXXxEvtdX1qUdhGHej4OhaZ7W2X8hXiazAXyuhJ3'
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
