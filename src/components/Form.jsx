@@ -6,6 +6,7 @@ export default function Form({ handleCount, handleStart }) {
 
   const handleDifficultyClick = (difficulty) => {
     setActiveDifficulty(difficulty)
+
     handleCount(difficulty) // Assuming handleCount takes difficulty as an argument
   }
 
@@ -16,25 +17,22 @@ export default function Form({ handleCount, handleStart }) {
 
         <div className="difficulty-buttons">
           <button
-            className={`difficulty ${
-              activeDifficulty === 'easy' ? 'active' : ''
-            }`}
-            onClick={() => handleDifficultyClick('easy')}
+            className={`difficulty ${activeDifficulty === 'easy' ? 'active' : ''
+              }`}
+            onClick={(e) => handleDifficultyClick('easy')}
           >
             Easy
           </button>
           <button
-            className={`difficulty ${
-              activeDifficulty === 'medium' ? 'active' : ''
-            }`}
+            className={`difficulty ${activeDifficulty === 'medium' ? 'active' : ''
+              }`}
             onClick={() => handleDifficultyClick('medium')}
           >
             Medium
           </button>
           <button
-            className={`difficulty ${
-              activeDifficulty === 'hard' ? 'active' : ''
-            }`}
+            className={`difficulty ${activeDifficulty === 'hard' ? 'active' : ''
+              }`}
             onClick={() => handleDifficultyClick('hard')}
           >
             Hard

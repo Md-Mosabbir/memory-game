@@ -33,11 +33,12 @@ function App() {
   }
 
   function handleCount(e) {
-    if (e.target.id === 'easy') {
+    if (e === 'easy') {
+
       setCount(4)
-    } else if (e.target.id === 'medium') {
+    } else if (e === 'medium') {
       setCount(8)
-    } else if (e.target.id === 'hard') {
+    } else if (e === 'hard') {
       setCount(16)
     }
   }
@@ -81,10 +82,10 @@ function App() {
     // Use the Fisher-Yates shuffle algorithm to shuffle the array
     for (let i = shuffledArray.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1))
-      ;[shuffledArray[i], shuffledArray[j]] = [
-        shuffledArray[j],
-        shuffledArray[i],
-      ]
+        ;[shuffledArray[i], shuffledArray[j]] = [
+          shuffledArray[j],
+          shuffledArray[i],
+        ]
     }
 
     // Return the shuffled array

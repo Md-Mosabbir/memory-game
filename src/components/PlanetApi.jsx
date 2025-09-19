@@ -10,7 +10,7 @@ export default function PlanetApi({
   startFetching,
   handleCard,
 }) {
-  const API_KEY = 'NXXxEvtdX1qUdhGHej4OhaZ7W2X8hXiazAXyuhJ3'
+  const API_KEY = import.meta.env.VITE_NASA_API_KEY
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
@@ -22,6 +22,8 @@ export default function PlanetApi({
       )
         .then((response) => response.json())
         .then((data) => {
+          console.log(data, count)
+          // add unique id to each card
           const addId = data.map((card) => ({ ...card, id: uuidv4() }))
           setPlanetData(addId)
         })
@@ -32,7 +34,7 @@ export default function PlanetApi({
           setLoading(false)
         })
     }
-  }, [startFetching, count, setPlanetData])
+  }, [startFetching, count, setPlanetData, API_KEY])
 
   return (
     <main className="main-game">
@@ -41,16 +43,12 @@ export default function PlanetApi({
           <div className="loader"></div>
         </div>
       )}
+
       {!loading &&
         planetData.map((card) => (
           <Card
-            key={uuidv4()}
-            id={card.id}
-            url={card.url}
-            title={card.title}
-            copyright={card.copyright}
-            media={card.media_type}
-            serviceVersion={card.service_version}
+            key={card.id} // use the unique id you already generated
+            data={card} // pass the whole card object
             handleCard={handleCard}
           />
         ))}
