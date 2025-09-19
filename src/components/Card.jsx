@@ -1,5 +1,4 @@
 import '../styles/card.css'
-
 export default function Card({ data, handleCard }) {
   const {
     date,
@@ -14,7 +13,7 @@ export default function Card({ data, handleCard }) {
 
   return (
     <div className="card" onClick={handleCard} id={date}>
-      <div className="space-image">
+      <div className="card-media">
         {media_type === 'image' ? (
           <img src={hdurl || url} alt={title} className="planet-image" />
         ) : media_type === 'video' ? (
@@ -29,17 +28,17 @@ export default function Card({ data, handleCard }) {
             ></iframe>
           </div>
         ) : null}
-
-        <div className="title-copyright">
-          <h2 className="title">{title}</h2>
-          {copyright && <h3 className="copyright">© {copyright}</h3>}
-        </div>
       </div>
 
-      <div className="info">
-        <p className="media"><strong>Type:</strong> {media_type}</p>
-        <p className="serviceVersion"><strong>API Version:</strong> {service_version}</p>
+      <div className="card-content">
+        <h2 className="title">{title}</h2>
+        {copyright && <h4 className="copyright">© {copyright}</h4>}
+        <p className="date">{date}</p>
         <p className="explanation">{explanation}</p>
+        <div className="card-footer">
+          <span className="media-type">{media_type}</span>
+          <span className="service-version">{service_version}</span>
+        </div>
       </div>
     </div>
   )

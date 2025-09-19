@@ -1,80 +1,91 @@
 .card {
-  background-color: #0b0c10; /* dark background */
-  color: #c5c6c7; /* light text */
+  background: white;
   border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  margin: 20px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
   max-width: 400px;
-  display: flex;
-  flex-direction: column;
+  margin: 16px;
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .card-media {
   width: 100%;
-  max-height: 250px;
+  height: 200px;
   overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .planet-image {
   width: 100%;
-  height: auto;
-  object-fit: contain; /* prevents cropping */
-  background-color: #1f2833;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
 .video-container iframe {
-  width: 100%;
-  height: 250px;
-  border-radius: 8px;
+  border: none;
 }
 
 .card-content {
-  padding: 15px;
-  display: flex;
-  flex-direction: column;
+  padding: 20px;
 }
 
 .title {
-  font-size: 1.2rem;
-  margin: 5px 0;
-  color: #66fcf1;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+  color: #1a1a1a;
+  line-height: 1.4;
 }
 
 .copyright {
-  font-size: 0.8rem;
-  color: #45a29e;
-  margin-bottom: 10px;
+  font-size: 0.875rem;
+  color: #666;
+  margin: 0 0 8px 0;
+  font-weight: 400;
 }
 
 .date {
-  font-size: 0.9rem;
-  color: #c5c6c7;
-  margin-bottom: 10px;
+  font-size: 0.875rem;
+  color: #888;
+  margin: 0 0 12px 0;
 }
 
 .explanation {
   font-size: 0.9rem;
-  line-height: 1.4;
-  color: #c5c6c7;
-  max-height: 150px;
-  overflow-y: auto; /* scroll if explanation is long */
-  margin-bottom: 10px;
+  line-height: 1.5;
+  color: #444;
+  margin: 0 0 16px 0;
 }
 
 .card-footer {
   display: flex;
   justify-content: space-between;
-  font-size: 0.8rem;
-  color: #45a29e;
+  align-items: center;
+  padding-top: 12px;
+  border-top: 1px solid #eee;
+}
+
+.media-type,
+.service-version {
+  font-size: 0.75rem;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.media-type {
+  background: #f0f0f0;
+  padding: 4px 8px;
+  border-radius: 4px;
 }
